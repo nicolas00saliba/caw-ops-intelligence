@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: caw-ops-intelligence
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: JWT_SECRET_KEY
+        generateValue: true
